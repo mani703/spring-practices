@@ -42,8 +42,8 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping("/update2")
 	public String update2(
-			@RequestParam(value="n", required=true, defaultValue="") String name,
-			@RequestParam(value="a", required=true, defaultValue="0") int age) {
+			@RequestParam(value="n", required=false) String name,
+			@RequestParam(value="a", required=true) int age) {
 		System.out.println("---" + name + "---" + age);
 		if(name == null) {
 			name = "";
